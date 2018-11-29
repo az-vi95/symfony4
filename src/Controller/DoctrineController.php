@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Publication;
+use App\Entity\Team;
 use App\Entity\User;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -254,16 +255,70 @@ class DoctrineController extends AbstractController
      */
     public function userPublications(User $user)
     {
+        /*
+         * en appelant de getter de l'attribut publications d'un objet User
+         * Doctrine va automatiquement faire une requete en bdd pour y mettre
+         * les publications liées au user grace à l'annotation OneToMany
+         * sur l'attribut
+         */
         return $this->render(
           'doctrine/publications.html.twig',
           [
-
+              'publications' =>$user->getPublications()
           ]
         );
+
     }
 
+    /**
+     * @param Request $request
+     * @Route("/create-user-with-publication")
+     */
+    public function createUserWithPublication(Request $request)
+    {
+        if($request->isMethod('POST')) {
+            $data = $request->request->all();
 
+            $user = new User();
+            // et on sette ses attributs  avec les données du formulaire
+            $user
+                ->setLastname($data['lastname'])
+                ->setFirstname($data['firstname'])
+                ->setEmail($data['email'])
+                // le setter de birthdate attend un objet DateTime
+                ->setBirthdate(new \DateTime($data['birthdate']))
+            ;
 
+            $publication = new Publication();
+            $publication
+                ->setTitle($data['title'])
+                ->setContent($data['content'])
+                ;
+            $user->addPublication($publication);
+
+            $em = $this->getDoctrine()->getManager();
+
+            $em->persist($user);
+            $em->flush();
+
+        }
+
+        return $this->render('doctrine/create_user_with_publication.html.twig');
+    }
+
+    /**
+     * @Route("/users/team/{id}")
+     */
+    public function usersByTeam(Team $team)
+    {
+        return $this->render(
+            'doctrine/list_users.html.twig',
+            [
+                'users' => $team->getUsers()
+            ]
+        );
+
+    }
 
 
 }

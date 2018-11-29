@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0fd429f1-54a0-4ec3-8e08-7973756ab364" name="Default Changelist" comment="" />
+    <list default="true" id="0fd429f1-54a0-4ec3-8e08-7973756ab364" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Team.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/TeamRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/doctrine/create_user_with_publication.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/DoctrineController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DoctrineController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Publication.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Publication.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,17 +35,17 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="env" value="20" />
-          <entry key="php" value="8171" />
-          <entry key="twig" value="4642" />
-          <entry key="txt" value="214" />
+          <entry key="php" value="10012" />
+          <entry key="twig" value="4713" />
+          <entry key="txt" value="232" />
           <entry key="yaml" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PHP" value="8171" />
-          <entry key="PLAIN_TEXT" value="234" />
-          <entry key="Twig" value="4642" />
+          <entry key="PHP" value="10012" />
+          <entry key="PLAIN_TEXT" value="252" />
+          <entry key="Twig" value="4713" />
           <entry key="YAML" value="3" />
         </counts>
       </usages-collector>
@@ -45,39 +54,64 @@
           <entry key="env" value="2" />
           <entry key="gitignore" value="1" />
           <entry key="json" value="1" />
-          <entry key="php" value="19" />
+          <entry key="php" value="24" />
           <entry key="test" value="1" />
-          <entry key="twig" value="51" />
+          <entry key="twig" value="53" />
           <entry key="yaml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JSON" value="1" />
-          <entry key="PHP" value="19" />
+          <entry key="PHP" value="24" />
           <entry key="PLAIN_TEXT" value="4" />
-          <entry key="Twig" value="51" />
+          <entry key="Twig" value="53" />
           <entry key="YAML" value="1" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.46532157">
       <split-first>
         <leaf>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Controller/DoctrineController.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="451">
-                  <caret line="259" selection-start-line="259" selection-end-line="259" />
+                <state relative-caret-position="4665">
+                  <caret line="311" column="36" selection-start-line="311" selection-start-column="36" selection-end-line="311" selection-end-column="36" />
                   <folding>
                     <element signature="e#34#61#0#PHP" expanded="true" />
                     <element signature="e#3393#3424#1#PHP" expanded="true" />
                     <element signature="e#4198#4230#1#PHP" expanded="true" />
                     <element signature="e#5016#5048#1#PHP" expanded="true" />
                     <element signature="e#6220#6253#1#PHP" expanded="true" />
-                    <element signature="e#6976#7009#1#PHP" expanded="true" />
+                    <element signature="e#7014#7047#0#PHP" expanded="true" />
+                    <element signature="e#8429#8478#1#PHP" expanded="true" />
+                    <element signature="e#8637#8668#0#PHP" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Repository/TeamRepository.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-252">
+                  <folding>
+                    <element signature="e#34#54#0#PHP" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Entity/Team.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-342">
+                  <caret line="28" column="44" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
+                  <folding>
+                    <element signature="e#30#78#0#PHP" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -86,8 +120,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Entity/Publication.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="270">
-                  <caret line="30" column="21" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
+                <state relative-caret-position="-327">
+                  <caret line="32" column="6" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="6" />
                 </state>
               </provider>
             </entry>
@@ -106,13 +140,13 @@
               <provider selected="true" editor-type-id="text-editor" />
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Entity/User.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-494">
-                  <caret line="48" column="22" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
+                <state relative-caret-position="330">
+                  <caret line="63" column="23" selection-start-line="63" selection-start-column="23" selection-end-line="63" selection-end-column="23" />
                   <folding>
-                    <element signature="e#30#73#0#PHP" expanded="true" />
+                    <element signature="e#30#78#0#PHP" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -133,7 +167,7 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/templates/doctrine/list_users.html.twig">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="255">
@@ -157,7 +191,7 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/templates/doctrine/update_user.html.twig">
               <provider selected="true" editor-type-id="text-editor">
                 <state>
@@ -181,6 +215,15 @@
               </provider>
             </entry>
           </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/templates/doctrine/create_user_with_publication.html.twig">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="390">
+                  <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+                </state>
+              </provider>
+            </entry>
+          </file>
         </leaf>
       </split-second>
     </splitter>
@@ -194,10 +237,6 @@
   </component>
   <component name="FrameworkCommandLineHistory">
     <commandsHistory>
-      <command text="c require server" />
-      <command text="s server:run" />
-      <command text="s make:controller  index" />
-      <command text="s debug:router" />
       <command text="s make:controller twig" />
       <command text="s server:run" />
       <command text="s make:controller http" />
@@ -215,7 +254,18 @@
       <command text="s doctrine:schema:update --force" />
       <command text="s cache:clear" />
       <command text="s server:run" />
+      <command text="s make:entity team" />
+      <command text="s doctrine:schema:validate" />
+      <command text="s doctrine:schema:update --dump-sql" />
+      <command text="s doctrine:schema:validate" />
+      <command text="s doctrine:schema:update --dump-sql" />
+      <command text="s doctrine:schema:update --force" />
+      <command text="s doctrine:schema:update --dump-sql" />
+      <command text="s doctrine:schema:update --force" />
     </commandsHistory>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="mock:///Dummy.txt" root0="SKIP_INSPECTION" />
@@ -244,10 +294,12 @@
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/templates/doctrine/create_user.html.twig" />
         <option value="$PROJECT_DIR$/templates/doctrine/update_user.html.twig" />
-        <option value="$PROJECT_DIR$/src/Entity/Publication.php" />
         <option value="$PROJECT_DIR$/templates/doctrine/publications.html.twig" />
-        <option value="$PROJECT_DIR$/src/Controller/DoctrineController.php" />
+        <option value="$PROJECT_DIR$/templates/doctrine/create_user_with_publication.html.twig" />
+        <option value="$PROJECT_DIR$/src/Entity/Team.php" />
         <option value="$PROJECT_DIR$/src/Entity/User.php" />
+        <option value="$PROJECT_DIR$/src/Entity/Publication.php" />
+        <option value="$PROJECT_DIR$/src/Controller/DoctrineController.php" />
       </list>
     </option>
   </component>
@@ -356,11 +408,12 @@
       <path value="$PROJECT_DIR$/vendor/facebook/webdriver" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-7" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -431,6 +484,11 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.zend.framework.tool" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\symfony-intro\templates\doctrine" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -457,12 +515,12 @@
       <workItem from="1542966529974" duration="19346000" />
       <workItem from="1543237320407" duration="739000" />
       <workItem from="1543308266185" duration="8702000" />
-      <workItem from="1543323347921" duration="27123000" />
+      <workItem from="1543323347921" duration="37825000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55969000" />
+    <option name="totallyTimeSpent" value="66671000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -477,7 +535,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49798387" visible="true" weight="0.15458423" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49798387" visible="true" weight="0.12633263" />
       <window_info id="Structure" order="1" sideWeight="0.5020161" side_tool="true" weight="0.06503198" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -492,7 +550,7 @@
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.22993493" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Command Line Tools Console" order="12" visible="true" weight="0.3114572" />
+      <window_info active="true" anchor="bottom" id="Command Line Tools Console" order="12" visible="true" weight="0.27586207" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -708,42 +766,9 @@
     <entry file="file://$PROJECT_DIR$/vendor/symfony/http-foundation/Request.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Repository/UserRepository.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/doctrine/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <folding>
-            <element signature="e#12#26#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/doctrine/publications.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
-          <folding>
-            <element signature="e#12#26#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/doctrine/create_user.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
-          <folding>
-            <element signature="e#12#26#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/doctrine/list_users.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="30" />
           <folding>
             <element signature="e#12#26#0#Twig" expanded="true" />
           </folding>
@@ -767,34 +792,110 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/doctrine/create_user.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Repository/UserRepository.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="63" column="23" selection-start-line="63" selection-start-column="23" selection-end-line="63" selection-end-column="23" />
+          <folding>
+            <element signature="e#30#78#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/doctrine/create_user_with_publication.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/doctrine/publications.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/symfony-intro (1)/src/Repository/TeamRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-225" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Repository/TeamRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-252">
+          <folding>
+            <element signature="e#34#54#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Team.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-342">
+          <caret line="28" column="44" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
+          <folding>
+            <element signature="e#30#78#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/Publication.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="30" column="21" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
+        <state relative-caret-position="-327">
+          <caret line="32" column="6" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/symfony-intro (1)/src/Controller/DoctrineController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4739">
+          <caret line="316" selection-start-line="316" selection-end-line="316" />
+          <folding>
+            <element signature="e#34#61#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/DoctrineController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="259" selection-start-line="259" selection-end-line="259" />
+        <state relative-caret-position="4665">
+          <caret line="311" column="36" selection-start-line="311" selection-start-column="36" selection-end-line="311" selection-end-column="36" />
           <folding>
             <element signature="e#34#61#0#PHP" expanded="true" />
             <element signature="e#3393#3424#1#PHP" expanded="true" />
             <element signature="e#4198#4230#1#PHP" expanded="true" />
             <element signature="e#5016#5048#1#PHP" expanded="true" />
             <element signature="e#6220#6253#1#PHP" expanded="true" />
-            <element signature="e#6976#7009#1#PHP" expanded="true" />
+            <element signature="e#7014#7047#0#PHP" expanded="true" />
+            <element signature="e#8429#8478#1#PHP" expanded="true" />
+            <element signature="e#8637#8668#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/User.php">
+    <entry file="file://$PROJECT_DIR$/templates/doctrine/list_users.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-494">
-          <caret line="48" column="22" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
+        <state relative-caret-position="255">
+          <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="30" />
           <folding>
-            <element signature="e#30#73#0#PHP" expanded="true" />
+            <element signature="e#12#26#0#Twig" expanded="true" />
           </folding>
         </state>
       </provider>

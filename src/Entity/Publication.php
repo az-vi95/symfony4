@@ -29,7 +29,9 @@ class Publication
     /**
      * @var User
      * // clé étrangère vers la table user
-     * @ORM\ManyToOne(targetEntity="User")
+     * inversedBy doit etre ajouté si on a ajouté un OneToMany côté User
+     *
+     * @ORM\ManyToOne(targetEntity="User", inversedBy="publications")
      * // non null
      * @ORM\JoinColumn(nullable=false)
      */

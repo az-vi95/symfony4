@@ -48,12 +48,27 @@ class User
 
     /**
      * @var Collection
+     * le OneToMany (facultatif) permet d'accéder aux publications
+     * depuis un objet User dans cet attribut
+     * mappedBy dit quel attribut dans Publication définit la clé étrangere avec ManyToOne
+     *
+     * cascade={"persis"} fait que quand on enregistre un User,
+     * ses publications sont enregistrées en même temps
+     * @ORM\OneToMany(targetEntity="Publication", mappedBy="author",cascade={"persist"},     fetch="EAGER")
+     * //
      */
     private $publications;
+
+    /**
+     * @var Collection
+     * @ORM\ManyToMany(targetEntity="Team", mappedBy="users")
+     */
+    private $teams;
 
     public function __construct()
     {
         $this->publications = new ArrayCollection();
+        $this->teams = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -109,10 +124,6 @@ class User
         return $this;
     }
 
-    public function __toString()
-    {
-        return $this->firstname . ' ' . $this->lastname;
-    }
 
     /**
      * @return Collection
@@ -131,6 +142,44 @@ class User
         $this->publications = $publications;
         return $this;
     }
+
+    public function addPublication(Publication $publication)
+    {
+        // on ajoute la publication au user
+        $this->publications->add($publication);
+        // éq. $this->publications[] = $publication;
+
+        // on sette l'auteur de la publication avec l'objet User
+        // qui appelle la méthode
+        $publication->setAuthor($this);
+    }
+
+    /**
+     * @return Collection
+     */
+    public function getTeams(): Collection
+    {
+        return $this->teams;
+    }
+
+    /**
+     * @param Collection $teams
+     * @return User
+     */
+    public function setTeams(Collection $teams): User
+    {
+        $this->teams = $teams;
+        return $this;
+    }
+
+
+
+
+    public function __toString()
+    {
+        return $this->firstname . ' ' . $this->lastname;
+    }
+
 
 
 
