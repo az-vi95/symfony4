@@ -1,0 +1,199 @@
+{# le template hérite de base.html.twig à la racine de /template#}
+{% extends 'base.html.twig.' %}
+
+{# surcharge du bloc title défini dans base.html.twig #}
+{% block title %}
+    {#
+        {{ parent }} permet de reprendre le contenu du bloc que l'on surcharge au lieu de le remplacer
+    #}
+    {{ parent() }} - Twig - SAMCRO
+{% endblock %}
+
+{% block body %}
+    {# définie une variable#}
+    {% set test = 'Une variable de test' %}
+
+    {# affiche une variable #}
+    <p>{{ test }}</p>
+
+    {# concaténation avec le tilde (~) #}
+    <p>{{ test ~ ' !' }}</p>
+
+    {# équivalent d'un var_dump() #}
+    {{  dump(test) }}
+
+    {# structure conditionnelle #}
+    {% if test != '' %}
+        <p>test est vide</p>
+    {% elseif test == 'test' %}
+        <p>test vaut 'test'</p>
+    {% else %}
+        <p>test vaut autre chose</p>
+    {% endif %}
+
+    {% set vrai = true %}
+    {% set faux = false %}
+
+    {#
+    and et or en toutes lettres
+    not en toutes lettres pour la négation
+    if ($vrai && !$faux)
+    #}
+    {% if vrai and not faux %}
+        <p>vrai est vrai et faux n'est pas vrai</p>
+    {% endif %}
+
+    {# tableau indexé#}
+    {% set tab = [1, 2, 3, 4] %}
+
+    {# foreach ($tab as $nb) #}
+    {%  for nb in tab %}
+        {{ nb }}<br>
+    {% endfor %}
+
+    {#
+    tableau assosiatif :
+    $hash = [
+    'foo' => 'FOO",
+    'bar' => 'BAR' ];
+    #}
+
+    {% set hash = {foo: 'FOO', bar: 'BAR'} %}
+
+    {# foreach ($hash as $key => $value) #}
+    {% for key, value in hash %}
+        {{ key }} : {{ value }} <br>
+    {% endfor %}
+
+
+    {# un élément dans le tableau par sa clé : echo $hash['foo'] #}
+    <p>{{ hash['foo'] }}</p>
+
+    {# autre syntaxe #}
+    <p>{{ hash.foo }}</p>
+
+    {#
+    La variable loop nous est toujours donée dans une boucle
+    #}
+    {% for nb in tab %}
+        Tour de boucle n° (index 1) :
+        {{ dump(loop.index) }}
+        Tour de boucle n° (index 0) :
+        {{ dump(loop.index0) }}
+
+
+        {% if loop.first %}
+            <p>1er tour de boucle</p>
+        {% endif %}
+    {% endfor %}
+
+
+    {#
+    on peut ajouter un else à une boucle for pour définir ce qui se passe si le tab est vide
+    #}
+    {% set vide = [] %}
+
+    {% for el in vide %}
+        {{ el }}<br>
+    {% else %}
+        <p>le tableau est vide</p>
+    {% endfor %}
+
+    {#  TESTS Avec le mot clé IS #}
+
+    {# if (isset($test)) #}
+    {% if test is defined %}
+        <p>La variable test existe</p>
+    {% endif %}
+
+    {# if (!empty($test)) #}
+    {% if test is not empty %}
+        <p>La variable test n'est pas vide</p>
+    {% endif %}
+
+    {# even et odd pour pair et impair #}
+    {% for nb in tab  %}
+        {% if loop.index is even %}
+            <p>Tour de boucle pair</p>
+        {% endif %}
+
+        {% if loop.index is odd %}
+            <p>Tour de boucle impair</p>
+        {% endif %}
+    {% endfor %}
+
+    {% set dix = 10 %}
+
+     if ($dix % 5 == 0)
+    {% if dix is divisible by(5) %}
+        <p>Dix est divisible par 5</p>
+    {% endif %}
+
+     if (in_array(2, $tab))
+    {% if 2 in tab %}
+        <p>Tab contient une valeur 2</p>
+    {% endif %}
+
+     Filtres avec un pipe()
+
+     echo strtoupper($test)
+    <p>{{ test | upper }}</p>
+
+     le filtre s'applique quand la variable est vide (empty)
+    <p>{{ var |default('la variable var est vide') }}</p>
+
+     formatage de date avec la meme syntaxe que la fonction date() de PHP
+    <p>{{ '2018-11-27'|date('d/m/Y') }}</p>
+
+     fonctionne aussi sur un objet de la classe DateTime de PHP
+    <p>{{  auj|date('d/m/Y H:i:s') }}</p>
+
+     first et last : 1er et dernier
+    <p>{{ tab|first }}</p>
+
+    <p>{{ tab|last }}</p>
+
+    {% set html = '<p> Un paragraphe</p>' %}
+
+     par défaut  le HTML est échappé en utlisant des entités HTML, soit lt; pour "<"
+     et gt; pour ">"
+    {{ html }}
+
+     pour que le HTML ne soit pas échappé :
+    {{ html|raw }}
+
+    {% set html = '<p> Un para</p>' %}
+    {{ html|raw }}
+
+     inclusion de fichier
+
+     le chemin du fichier à partir de la racine du répertoire templates
+    {% include 'twig/inclus.html.twig' %}
+
+     only fait que les variables définies ici ne sont pas accessibles dans le fichier inclus
+    {% include 'twig/inclus.html.twig' only %}
+
+     passe une variable foo ou fichier inclus
+    {% include 'twig/inclus.html.twig' with {foo: 'variable crée pour inclusion'} %}
+
+     ne passe que la variable foo ou fichier inclus
+    {% include 'twig/inclus.html.twig' with {foo: 'variable crée pour inclusion'} only %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

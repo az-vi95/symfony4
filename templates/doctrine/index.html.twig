@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {#
+    on peut afficher l'objet User car sa classe contient
+    une méthode __toString()
+    #}
+    <p>Bonjour {{ user }}</p>
+{% endblock %}
