@@ -320,6 +320,46 @@ class DoctrineController extends AbstractController
 
     }
 
+    /**
+     * @Route("/add-user-to-team/{id}")
+     */
+    public function addUserToTeam(Request $request, Team $team)
+    {
+            // entity manager
+            $em = $this->getDoctrine()->getManager();
+            // UserRepository
+            $repository = $em->getRepository(User::class);
+            // tous les users de la bdd sous forme d'un tableau d'objets User
+            $users = $repository->findAll();
+
+            if($request->isMethod('POST')) {
+                //$_POST['user']
+                $userId = $request->request->get('user');
+                // l'objet User qui a l'id que l'on a reçu du formulaire
+                $user = $repository->find($userId);
+                // ajout du User à la collection d'objets User de la Team
+                $team->getUsers()->add($user);
+
+                // enregistrement de la team en bdd
+                // qui va enregister les ids d'user et de team
+                // dans la table de relation team_user
+                $em->persist($team);
+                $em->flush();
+
+            }
+
+
+            return $this->render(
+                'doctrine/add_user_to_team.html.twig',
+                [
+                    // on passe le tableau d'objets User au template
+                    'users' => $users,
+                    'team'  => $team
+                ]
+            );
+
+    }
+
 
 }
 
